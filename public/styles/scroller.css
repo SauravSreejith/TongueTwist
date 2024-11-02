@@ -1,0 +1,28 @@
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+#messageContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+#messageContainer::-webkit-scrollbar-track {
+    background: #36393e;
+}
+
+#messageContainer::-webkit-scrollbar-thumb {
+    background-color: #1e2124;
+    border-radius: 10px;
+}
+
+#messageContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+#messageContainer::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Firefox */
+#messageContainer {
+    scrollbar-width: thin;
+    scrollbar-color: #1e2124 #36393e;
+}
