@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify({ username: storedUsername, passwordHash: storedPasswordHash })
         }).then(res => res.json()).then(data => {
             if (data.success) {
+                fetchMessages();
                 usernameInfo.innerText = storedUsername;
             } else {
                 openModal(authModal);
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         localStorage.setItem('username', username);
                         localStorage.setItem('passwordHash', data.hash);
                         closeAllModals();
+                        fetchMessages();
                         usernameInfo.innerText = username;
                     }
                 });
@@ -79,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('username', username);
                 localStorage.setItem('passwordHash', data.hash);
                 closeAllModals();
+                fetchMessages();
                 usernameInfo.innerText = username;
             } else {
                 alert("Invalid credentials.");
@@ -92,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         location.reload();
     });
 
-    function createMessageCard(name, content) {
+    function createSelfMessage(name, content) {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
@@ -116,22 +119,28 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         messageContainer.appendChild(card);
+        autoScroll()
     }
 
-    document.getElementById('sendMessageButton').addEventListener('click', () => {
+    function broadCast() {
         const messageInput = document.getElementById('messageInput');
         const messageContent = messageInput.value;
         const username = localStorage.getItem('username');
 
         if (messageContent && username) {
-            fetch(`${serverUrl}/api/messages`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, message: messageContent })
-            }).then(res => res.json()).then(data => {
-                createMessageCard(username, messageContent);
-                messageInput.value = '';
-            });
+            sendMessage(username, messageContent);
+            messageInput.value = '';
+        }
+    }
+
+    document.getElementById('sendMessageButton').addEventListener('click', () => {
+        broadCast()
+    });
+
+    document.getElementById('messageInput').addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            broadCast();
         }
     });
 
@@ -145,5 +154,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeAllModals() {
         document.querySelectorAll('.modal.is-active').forEach(closeModal);
+    }
+
+    function autoScroll() {
+        const messageContainer = document.getElementById('messageContainer');
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+    }
+
+
+    function fetchMessages() {
+        fetch(`${serverUrl}/api/messages`).then(res => res.json()).then(data => {
+            if (data.state === 1) {
+                data.messages.forEach(message => {createSelfMessage(message.user, message.messageContent)});
+            } else {
+                console.log("No messages were retrieved");
+            }
+        });
     }
 });
