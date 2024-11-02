@@ -1,25 +1,21 @@
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [Project Name] 🎯
+# TongueTwist 
 
-
-## Basic Details
-### Team Name: [Name]
+### Team Name: StardustCrusaders
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Saurav Sreejith - NSS College of Engineering, Palakkad
 
 ### Project Description
-[2-3 lines about what your project does]
+TongueTwist is a playful, multilingual chatroom designed to make communication hilariously confusing. In this chatroom, every message sent by a user is instantly translated into a randomly selected language before being displayed to the recipient. By blending linguistic variety with random translations, TongueTwist transforms a simple conversation into a comedic experience where every message is a new puzzle. Not just that, sometimes it may even go through multiple layers of translation before reaching the other user making it even more cryptic or just some random emojis, who knows? 😜
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+People everywhere are able to communicate clearly and easily online. Why should messaging be straightforward when it can be wildly confusing? Why does every message have to be clear and precise, when it can be just difficult to read or just some random gibberish.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+TongueTwist steps in to make your chatting experience into a nightmare. Want to share something to your friend? Well guess what? You can't! TongueTwist introduces random translations into the chat flow, creating hilariously unintelligible conversations. Say “hello” and you might get “bonjour” or “你好” in return! Good luck trying to have a normal conversation.
 
 ## Technical Details
 ### Technologies/Components Used
