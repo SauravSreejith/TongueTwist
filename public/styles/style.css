@@ -1,4 +1,43 @@
 html, body {
-    background-color: #1e2124;
+    background-color: #36393e;
     color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #1e2124 !important;
+    min-height: 50px !important;
+    border-bottom: 2px solid #ff6484 !important;
+    position: fixed;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e2124 !important;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 50px !important;
+    margin-top: auto;
+}
+
+#messageContainer {
+    flex-grow: 1;
+    margin: 1rem 0; /* Optional spacing */
+    overflow-y: auto;
+    max-height: 73vh;
+}
+
+.card {
+    background-color: #282b30 !important;
 }
