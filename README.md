@@ -1,7 +1,9 @@
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# TongueTwist 
+![logo](https://i.ibb.co/dc09dN8/Picsart-24-11-02-15-31-19-903.png)
 
+
+# TongueTwist
 ### Team Name: StardustCrusaders
 
 
@@ -18,74 +20,54 @@ People everywhere are able to communicate clearly and easily online. Why should 
 TongueTwist steps in to make your chatting experience into a nightmare. Want to share something to your friend? Well guess what? You can't! TongueTwist introduces random translations into the chat flow, creating hilariously unintelligible conversations. Say “hello” and you might get “bonjour” or “你好” in return! Good luck trying to have a normal conversation.
 
 ## Technical Details
-### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+### Requirements
+- Any LTS version of Node.js
+- Git
+### Languages
+- HTML
+- CSS
+- JavaScript
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+### Frameworks
+- [**Express.js**](https://expressjs.com/)
+- [**Bulma**](https://bulma.io/)
 
-### Implementation
-For Software:
+### Libraries
+- [**Quick.DB**](https://github.com/plexidev/quick.db)
+- [**ws**](https://github.com/websockets/ws)
+- [**google-translate-api-x**](https://github.com/AidanWelch/google-translate-api)
+
+### Tools used
+- npm
+
 # Installation
-[commands]
+```bash
+git clone https://github.com/SauravSreejith/TongueTwist.git
+cd TongueTwist
+npm install
+```
 
 # Run
-[commands]
+```bash
+node main.js
+```
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Authentication](https://i.ibb.co/b6yqsbt/image.png)
+*Authentication*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Chat Example](https://i.ibb.co/HPt7Bvv/image.png)
+*A sample chat between two users.*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
-
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Saurav Sreejith
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
