@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://tonguetwist-z3xr3jjg.b4a.run/');
+const ws = new WebSocket('wss://tonguetwist-z3xr3jjg.b4a.run/');
 
 ws.onopen = () => {
     console.log('Connected to WebSocket server');
