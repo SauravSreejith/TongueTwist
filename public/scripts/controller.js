@@ -1,4 +1,4 @@
-const serverUrl = "http://localhost:3000";
+const serverUrl = "https://tonguetwist-z3xr3jjg.b4a.run";
 
 document.addEventListener('DOMContentLoaded', () => {
     const usernameInfo = document.getElementById('usernameInfo');
