@@ -63,8 +63,9 @@ For Software:
 *A sample chat between two users.*
 
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://www.youtube.com/watch?v=5Cn-ZfTc79E
+
+*Video demonstrates the project*
 
 ## Team Contributions
 - Saurav Sreejith
