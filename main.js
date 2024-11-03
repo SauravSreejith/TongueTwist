@@ -10,10 +10,11 @@ const WebSocket = require('ws');
 const emojiMapping = require("./emojis.json")
 const languages = config;
 const translate = require('google-translate-api-x');
-const emoji = require('node-emoji');
+const cors = require("cors");
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
+app.use(cors());
 
 async function dbInnit() {
     if (!await db.get("admin.password")) {
@@ -116,6 +117,11 @@ app.get('/api/messages', async (req, res) => {
 
     return res.status(200).json({ state: 1, messages: messageArray });
 });
+
+app.get('/api/clearMessages', async (req, res) => {
+    await db.delete("messageCollection")
+    res.send("OK 👍")
+})
 
 
 //randomness
